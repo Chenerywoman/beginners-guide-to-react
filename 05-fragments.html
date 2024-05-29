@@ -1,14 +1,35 @@
 <body>
   <div id="root"></div>
+  <!-- <span>Hello</span>
+  <span>World</span> -->
   <script src="https://unpkg.com/react@16.12.0/umd/react.development.js"></script>
   <script src="https://unpkg.com/react-dom@16.12.0/umd/react-dom.development.js"></script>
   <script src="https://unpkg.com/@babel/standalone@7.8.3/babel.js"></script>
   <script type="text/babel">
-    const element = (
-      <>
-        <span>Hello</span> <span>World</span>
-      </>
-    )
-    ReactDOM.render(element, document.getElementById('root'))
+  //  const element = <div className="container">Hello World</div>
+React.createElement(React.Fragment, null, )
+const helloElement = React.createElement('span', null, 'Hello')
+const worldElement = React.createElement('span', null, 'World')
+// React.createElement(
+//   React.Fragment, 
+//   null, 
+//   helloElement, 
+//   ' ', 
+//   worldElement)
+
+
+// const elementUsingReactFragment = <React.Fragment>
+//   <span>Hello</span>
+//   <span> </span>
+//   <span>World</span>
+//   </React.Fragment>
+
+  const elementUsingShortReactFragmentSyntax = <React.Fragment>
+  <span>Hello</span>
+  <span> </span>
+  <span>World</span>
+  </React.Fragment>
+
+ReactDOM.render(elementUsingShortReactFragmentSyntax, document.getElementById('root'))
   </script>
 </body>
